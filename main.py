@@ -1,13 +1,17 @@
-def calculate_rectangle_area(length, width):
-    return length * width
+def HPP(p, vcu, fc) :
+    hpp = fc / (p - vcu)
+    return hpp
+
+def var_cost(vc1, c):
+    vcu = vc1/c
+    return vcu
 
 def main():
-    print("Enter the dimensions of the rectangle:")
-    length = float(input("Length: "))
-    width = float(input("Width: "))
-    
-    area = calculate_rectangle_area(length, width)
-    print(f"The area of the rectangle is: {area}")
+    p = float(input("enter the price :"))
+    vc1 = float(input("enter the variable cost :"))
+    c = float(input("enter the items number:"))
 
-if __name__ == "__main__":
-    main()
+    vcu = var_cost(vc1, c)
+    hpp = HPP(p, vcu, c)
+    print(f"hppnya adalah {hpp}")
+main()
